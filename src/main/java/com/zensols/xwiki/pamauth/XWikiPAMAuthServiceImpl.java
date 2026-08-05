@@ -178,6 +178,9 @@ public class XWikiPAMAuthServiceImpl extends XWikiAuthServiceImpl
             request.getSession().setAttribute(SecurityRequestWrapper.PRINCIPAL_SESSION_KEY, principal);
             request.getSession().setAttribute(PAM_REMOTE_ATTRIBUTE, context.getRequest().getRemoteUser());
 
+            // Notify about this new authentication
+            getNotifier().notify(principal.getName());
+
             user = new XWikiUser(principal.getName());
         } else {
             user = new XWikiUser(principal.getName().startsWith(context.getWikiId())
