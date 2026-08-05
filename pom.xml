@@ -26,7 +26,7 @@
     <parent>
         <groupId>org.xwiki.contrib</groupId>
         <artifactId>parent-platform</artifactId>
-        <version>8.4-12</version>
+        <version>8.4-16</version>
     </parent>
     <artifactId>pamauth-authenticator</artifactId>
     <version>1.1-SNAPSHOT</version>
@@ -50,6 +50,7 @@
     </developers>
 
     <properties>
+        <xwiki.jacoco.instructionRatio>0.00</xwiki.jacoco.instructionRatio>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.site.readme.dir>${basedir}/src/site/markdown</project.site.readme.dir>
         <xwiki.revapi.skip>true</xwiki.revapi.skip>
