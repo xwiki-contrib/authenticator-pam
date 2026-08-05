@@ -29,7 +29,7 @@
         <version>8.4-16</version>
     </parent>
     <artifactId>pamauth-authenticator</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>PAM Authentication</name>
     <description>Password Authentication Module (PAM) bridge</description>
@@ -39,7 +39,7 @@
         <connection>scm:git:git://github.com/xwiki-contrib/authenticator-pam.git</connection>
         <developerConnection>scm:git:git@github.com:xwiki-contrib/authenticator-pam.git</developerConnection>
         <url>https://github.com/xwiki-contrib/authenticator-pam</url>
-        <tag>pamauth-authenticator-1.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
