@@ -71,6 +71,12 @@
             <artifactId>xwiki-platform-oldcore</artifactId>
             <version>${platform.version}</version>
         </dependency>
+        <!-- Remove when upgrading to XWiki 13.3+ -->
+        <dependency>
+            <groupId>org.xwiki.contrib</groupId>
+            <artifactId>userauthenticatedevent-backport</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
         <!-- pwauth wrapper -->
         <dependency>

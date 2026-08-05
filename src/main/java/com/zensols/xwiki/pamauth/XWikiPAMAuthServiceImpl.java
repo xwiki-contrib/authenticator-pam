@@ -36,6 +36,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xwiki.context.Execution;
 import org.xwiki.context.ExecutionContext;
+import org.xwiki.security.authentication.UserAuthenticatedEventNotifier;
 import org.xwiki.text.StringUtils;
 
 
@@ -55,6 +56,16 @@ public class XWikiPAMAuthServiceImpl extends XWikiAuthServiceImpl
     private final ConcurrentMap<String, String> lockMap = new ConcurrentHashMap<>();
     private Execution execution;
 
+    private UserAuthenticatedEventNotifier notifier;
+
+    private UserAuthenticatedEventNotifier getNotifier()
+    {
+        if (this.notifier == null) {
+            this.notifier = Utils.getComponent(UserAuthenticatedEventNotifier.class);
+        }
+
+        return this.notifier;
+    }
     protected XWikiPAMConfig initConfiguration(String authInput)
     {
         ExecutionContext econtext = getExecutionContext();
